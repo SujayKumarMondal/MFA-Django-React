@@ -2,6 +2,11 @@
 
 A full **Multi-Factor Authentication (MFA) system** built with **Django + Django REST Framework** for the backend and **React (Vite)** for the frontend. Uses **MySQL** for persistent storage, **Redis** for OTP/session caching, and **PyOTP** for TOTP-based MFA. JWT authentication is used with access and refresh tokens.
 
+![Backend StartUp](backend\screenshots\backend_startup.png)
+![Frontend StartUp](backend\screenshots\frontend_startup.png)
+![Register](backend\screenshots\register.png)
+![Login](backend\screenshots\login.png)
+![MFA](backend\screenshots\mfa.png)
 ---
 
 ## **Tech Stack**
@@ -11,7 +16,6 @@ A full **Multi-Factor Authentication (MFA) system** built with **Django + Django
 - Database: MySQL
 - Caching: Redis
 - Authentication: JWT + TOTP MFA
-- Email: SMTP for OTP
 
 ---
 
