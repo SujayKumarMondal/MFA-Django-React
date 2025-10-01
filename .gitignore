@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.coverage
+*.pytest_cache/
+venv/
+env/
+ENV/
+.venv/
+# Django migrations
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Node / React / Vite
+node_modules/
+dist/
+.vite/
+.env.local
+.env.*.local
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+.DS_Store

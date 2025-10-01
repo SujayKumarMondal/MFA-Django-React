@@ -1,0 +1,11 @@
+Django
+djangorestframework
+PyJWT
+mysqlclient
+redis
+django-cors-headers
+pyotp
+qrcode
+dotenv
+djangorestframework-simplejwt
+Pillow

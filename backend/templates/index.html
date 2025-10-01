@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFA Auth Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #646cff;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+        p {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+        .feedback-btn, .docs-btn {
+            background: #646cff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.8em 1.5em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 1em;
+            margin-right: 1em;
+        }
+        .feedback-btn:hover, .docs-btn:hover {
+            background: #535bf2;
+        }
+        .endpoints {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 2em 2em 1em 2em;
+            margin-bottom: 2em;
+            max-width: 600px;
+        }
+        .endpoints h2 {
+            color: #646cff;
+            margin-bottom: 1em;
+        }
+        .endpoints ul {
+            list-style: none;
+            padding: 0;
+        }
+        .endpoints li {
+            margin-bottom: 1em;
+            font-size: 1.05em;
+        }
+        .endpoint-path {
+            font-weight: bold;
+            color: #213547;
+        }
+        .endpoint-desc {
+            color: #555;
+            margin-left: 0.5em;
+        }
+        footer {
+            background: #242424;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em 0 1em 0;
+        }
+        .footer-links {
+            margin: 0.5em 0;
+        }
+        .footer-links a {
+            color: #646cff;
+            margin: 0 0.7em;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>MFA Auth Portal</h1>
+        <p>Welcome to the backend root page.<br>Secure your account with Multi-Factor Authentication.</p>
+        <div class="btn-group">
+            <button class="feedback-btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSerBZk218PgGOXaU3xNRizmdg3NGVcQwVAxo7TaTJGkqPbmGw/viewform')">Give Feedback</button>
+        </div>
+        <div class="endpoints">
+            <h2>API Endpoints</h2>
+            <ul>
+                <li><span class="endpoint-path">POST /auth/register/</span> <span class="endpoint-desc">Register a new user account.</span></li>
+                <li><span class="endpoint-path">POST /auth/login/</span> <span class="endpoint-desc">Login and receive JWT access/refresh tokens.</span></li>
+                <li><span class="endpoint-path">GET /auth/mfa/setup/</span> <span class="endpoint-desc">Get QR code for MFA setup (authenticated).</span></li>
+                <li><span class="endpoint-path">POST /auth/mfa/verify/</span> <span class="endpoint-desc">Verify MFA token (TOTP or OTP).</span></li>
+                <li><span class="endpoint-path">POST /auth/mfa/send-otp/</span> <span class="endpoint-desc">Send OTP to user's email (authenticated).</span></li>
+                <li><span class="endpoint-path">POST /auth/token/refresh/</span> <span class="endpoint-desc">Refresh JWT access token using refresh token.</span></li>
+                <li><span class="endpoint-path">POST /auth/logout/</span> <span class="endpoint-desc">Logout the current user (authenticated).</span></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:thisissujay12@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/sujay-kumar-mondal-a125481b7/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/SujayKumarMondal/MFA-Django-React" target="_blank">GitHub</a>
+        </div>
+        <div>&copy; 2025 MFA Auth Portal</div>
+    </footer>
+</body>
+</html>
