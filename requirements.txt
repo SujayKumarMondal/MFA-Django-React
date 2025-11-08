@@ -8,3 +8,4 @@ qrcode
 dotenv
 djangorestframework-simplejwt
 Pillow
+gunicorn
