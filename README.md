@@ -14,7 +14,7 @@ A full **Multi-Factor Authentication (MFA) system** built with **Django + Django
 - Backend: Django, Django REST Framework
 - Frontend: React + Vite
 - Database: MySQL
-- Caching: Redis
+<!-- - Caching: Redis -->
 - Authentication: JWT + TOTP MFA
 
 ---

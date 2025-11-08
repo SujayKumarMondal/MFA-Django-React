@@ -21,7 +21,7 @@ from .serializers import (
 from .models import User
 from .utils import (
     generate_mfa_secret, generate_qr_code_base64, verify_totp,
-    send_otp_email, store_otp, get_otp
+    send_otp_email
 )
 
 # ---------------------------
@@ -192,7 +192,7 @@ class MFASendOTPView(APIView):
         ok = send_otp_email(user.email, otp)
 
         if ok:
-            store_otp(user.email, otp, expiry=300)
+            # store_otp(user.email, otp, expiry=300)
             return Response({"message": "OTP sent to email"})
         return Response({"error": "Failed to send OTP email"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

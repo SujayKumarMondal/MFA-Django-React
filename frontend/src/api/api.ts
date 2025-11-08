@@ -2,7 +2,7 @@ import axios from "axios";
 
 // --- Base Configuration ---
 const api = axios.create({
-  baseURL: "http://localhost:8015/auth", // backend base URL
+  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:8015/auth",
   withCredentials: false, // change to true only if backend uses cookies
   headers: {
     "Content-Type": "application/json",

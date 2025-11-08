@@ -3,18 +3,8 @@ import pyotp
 import qrcode
 import io
 import base64
-import redis
-import os
 from django.core.mail import send_mail
 from django.conf import settings
-
-# Redis setup - ensure REDIS_HOST and REDIS_PORT in env
-REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
-REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
-try:
-    r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
-except Exception:
-    r = None
 
 def generate_mfa_secret():
     """
@@ -64,22 +54,3 @@ def send_otp_email(to_email, otp, subject="Your OTP Code"):
     except Exception:
         return False
 
-def store_otp(email, otp, expiry=300):
-    """
-    Store OTP in redis with expiry (seconds). Key: otp:{email}
-    """
-    if r:
-        try:
-            r.setex(f"otp:{email}", expiry, otp)
-            return True
-        except Exception:
-            return False
-    return False
-
-def get_otp(email):
-    if r:
-        try:
-            return r.get(f"otp:{email}")
-        except Exception:
-            return None
-    return None
