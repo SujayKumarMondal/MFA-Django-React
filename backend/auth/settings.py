@@ -24,7 +24,7 @@ EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "True") == "True"
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173", "https://2FAuthentication.railway.app")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://2FAuthentication.railway.app")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
