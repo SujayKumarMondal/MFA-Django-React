@@ -76,6 +76,21 @@
             color: #555;
             margin-left: 0.5em;
         }
+        .endpoint-btn {
+            background: #646cff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-right: 0.5em;
+        }
+        .endpoint-btn:hover {
+            background: #535bf2;
+        }
         footer {
             background: #242424;
             color: #fff;
@@ -112,13 +127,13 @@
         <div class="endpoints">
             <h2>API Endpoints</h2>
             <ul>
-                <li><span class="endpoint-path">POST /auth/register/</span> <span class="endpoint-desc">Register a new user account.</span></li>
-                <li><span class="endpoint-path">POST /auth/login/</span> <span class="endpoint-desc">Login and receive JWT access/refresh tokens.</span></li>
-                <li><span class="endpoint-path">GET /auth/mfa/setup/</span> <span class="endpoint-desc">Get QR code for MFA setup (authenticated).</span></li>
-                <li><span class="endpoint-path">POST /auth/mfa/verify/</span> <span class="endpoint-desc">Verify MFA token (TOTP or OTP).</span></li>
-                <li><span class="endpoint-path">POST /auth/mfa/send-otp/</span> <span class="endpoint-desc">Send OTP to user's email (authenticated).</span></li>
-                <li><span class="endpoint-path">POST /auth/token/refresh/</span> <span class="endpoint-desc">Refresh JWT access token using refresh token.</span></li>
-                <li><span class="endpoint-path">POST /auth/logout/</span> <span class="endpoint-desc">Logout the current user (authenticated).</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/register/', '_blank')">POST /auth/register/</button> <span class="endpoint-desc">Register a new user account.</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/login/', '_blank')">POST /auth/login/</button> <span class="endpoint-desc">Login and receive JWT access/refresh tokens.</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/mfa/setup/', '_blank')">GET /auth/mfa/setup/</button> <span class="endpoint-desc">Get QR code for MFA setup (authenticated).</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/mfa/verify/', '_blank')">POST /auth/mfa/verify/</button> <span class="endpoint-desc">Verify MFA token (TOTP or OTP).</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/mfa/send-otp/', '_blank')">POST /auth/mfa/send-otp/</button> <span class="endpoint-desc">Send OTP to user's email (authenticated).</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/token/refresh/', '_blank')">POST /auth/token/refresh/</button> <span class="endpoint-desc">Refresh JWT access token using refresh token.</span></li>
+                <li><button class="endpoint-btn" onclick="window.open('http://127.0.0.1:8015/auth/logout/', '_blank')">POST /auth/logout/</button> <span class="endpoint-desc">Logout the current user (authenticated).</span></li>
             </ul>
         </div>
     </div>

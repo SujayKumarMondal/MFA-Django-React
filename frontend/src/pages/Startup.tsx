@@ -13,7 +13,7 @@ const Startup: React.FC = () => {
         <h1 className="title">{PROJECT_TITLE}</h1>
         <p className="subtitle">{PROJECT_DESC}</p>
         <img
-          src="/mfa.svg"
+          src="/images.png"
           alt="Logo"
           style={{ width: "80px", margin: "1em auto" }}
         />

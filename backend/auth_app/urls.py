@@ -1,7 +1,8 @@
 from django.urls import path
 from .views import (
     RegisterView, LoginView, MFASetupView, MFAVerifyView,
-    MFASendOTPView, TokenRefreshView, LogoutView
+    MFASendOTPView, TokenRefreshView, LogoutView, RequestPasswordResetView,
+    ConfirmPasswordResetView,
 )
 
 urlpatterns = [
@@ -12,4 +13,6 @@ urlpatterns = [
     path("mfa/send-otp/", MFASendOTPView.as_view()),
     path("token/refresh/", TokenRefreshView.as_view()),
     path("logout/", LogoutView.as_view()),
+    path("reset-password/request/", RequestPasswordResetView.as_view()),
+    path("reset-password/confirm/", ConfirmPasswordResetView.as_view()),
 ]
